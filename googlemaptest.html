@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+	// Initialize and add the map
+function initMap() {
+  // The location of Dramaga
+  var dramaga = {
+    lat: -6.553512,
+    lng: 106.7293611
+  };
+  // The map, centered at Dramaga
+  var map = new google.maps.Map(
+    document.getElementById('map'), {
+      zoom: 13,
+      center: dramaga,
+      /* mapTypeId: 'roadmap' */
+    });
+  var trafficLayer = new google.maps.TrafficLayer();
+  trafficlayer.setMap(map);
+
+  // The marker, positioned at Dramaga
+  //var marker = new google.maps.Marker({position: dramaga , map: map});
+  /* var mapOption = {
+  zoom: 13
+  
+  } */
+}
+	</script>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,322 @@
+﻿compiler:1 <!-- html content by Nandu Arav-->
+<!--Morpheus
+ note that my goal was not to touch nandu s html content , and not rely on Javascript to maintain purity of responsiveness.
+so only option is pure CSS, but also have to maintain a balance in putting design features so that it does not complicate reading -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    <style>
+/*styles by MORPHEUS
+Note that my goal here is to test features of CSS to make the reading process look more interactive but without touching html file so no divs , classes , ids and no JS to maintain responsiveness*/
+
+@keyframes shake1{
+    0%{transform:rotate(3deg);}
+    100%{transform:rotate(-3deg);}
+}
+@keyframes shake2{
+    0%{transform:rotate(-3deg);}
+    100%{transform:rotate(3deg);}
+}
+body {
+    color:white;
+    font-size:18px;
+    text-align:justify;
+    background-color:#456789;
+    font-family:courier;
+    letter-spacing:-1px;
+
+}
+p{
+    width:95%;
+    padding:3px;
+    font-size:0.5em;
+    background-color:#566699;
+    box-shadow:-2px -2px 10px cyan,
+                -3px -3px 10px cyan;
+    transition:1s;
+    transition:font-size 0.01s;
+    transition:content 0.01s;
+
+}
+p::first-line{
+    font-size:1em;
+}
+p:nth-child(even){
+    border-left:8px ridge #34347a;
+    border-top:8px ridge  #34347a;
+}
+p:nth-child(odd){
+    border-left:8px ridge #333;
+    border-top:8px ridge  #333;
+}
+p::first-letter{
+    font-size:1.4em;
+    color:yellow;
+}
+p:nth-child(odd):hover{
+    background-color:#46228a;
+    box-shadow:0px 0px 0px black, 0px 0px 0px black;
+    animation:shake1 0.12s 1 ease;
+    font-size:1em;
+}
+p:nth-child(even):hover{
+    background-color:#46228a;
+    box-shadow:0px 0px 0px black, 0px 0px 0px black;
+    animation:shake2 0.12s 1 ease;
+    font-size:1em;
+}
+p:nth-child(3):hover::before{
+    /*content:url("http://www.freeiconspng.com/uploads/horror-png-27.png");
+    /*content:url("http://soundbible.com/66-Screaming-Female.html");*/
+    
+}
+
+img{
+    position:fixed;
+    top: 0;
+    left:-150px;
+    z-index:-2;
+    height:100vh;
+    filter:blur(14px);
+}
+
+
+</style><script>alert("Try clicking question boxes 1, 2 ,  3 to see interactive text in order\n\nHtml Content by Nandu Arav\nStyles & strokes by Morpheus");
+
+
+window.onload = function(){
+    document.getElementById('sound1').addEventListener('click', function(){
+       playMusic(); 
+       document.querySelector('img').style.zIndex = "5";
+       document.querySelector('img').style.filter = "blur(0)";
+       
+       setTimeout(function (){
+          document.querySelector('img').style.zIndex = "-5";
+          alert ("Dont stare in those eyes keep reading")
+       }, 2000)
+    });
+}
+
+function playMusic(){
+    var playPromise = document.querySelector('#myAudio').play();
+
+// In browsers that don’t yet support this functionality,
+// playPromise won’t be defined.
+if (playPromise !== undefined) {
+    playPromise.then(function() {
+        // Automatic playback started!
+        // console.log("auto playback started")
+    }).catch(function(error) {
+        // Automatic playback failed.
+        // Show a UI element to let the user manually start playback.
+        // console.log("auto playback is blocked here and requires user interaction hence click anywhere for music");
+    });
+    }
+
+}
+</script></head>
+    <body>
+        <p>
+            
+            1)What is data-structure?
+<br />
+    Data structure is a way of defining, storing and retriving of data in a structural and systemetic way.
+A data structure may contain different type of data items.
+</p>
+<p>
+2)What are various data-structures available?
+<br/>
+     Data structure availability may vary by programming languages. Commonly available data structures are list, arrays, stack, 
+queues, graph, tree etc.
+</p>
+<p id="sound1" >
+3)What is selection sort?
+<br/>
+     Selection sort is in-place sorting technique. It divides the data set into two sub-lists: sorted and unsorted. Then it selects
+the minimum element from unsorted sub-list and places it into the sorted list. This iterates unless all the elements from unsorted 
+sub-list are consumed into sorted sub-list.
+</p>
+<p>
+4)How insertion sort and selection sorts are different?
+<br/>
+      Both sorting techniques maintains two sub-lists, sorted and unsorted and both take one element at a time and places it into 
+sorted sub-list. Insertion sort works on the current element in hand and places it in the sorted array at appropriate location
+maintaining the properties of insertion sort. Whereas, selection sort searches the minimum from the unsorted sub-list and replaces
+it with the current element in hand.
+</p>
+<p>
+5)What is merge sort and how it works?
+<br/>
+      Merge sort is sorting algorithm based on divide and conquer programming approach. It keeps on dividing the list into smaller
+sub-list until all sub-list has only 1 element. And then 
+code.sololearn.com/:1 Mixed Content: The page at 'https://code.sololearn.com/W9LL1aK51Md9/#html' was loaded over HTTPS, but requested an insecure image 'http://www.freeiconspng.com/uploads/horror-png-27.png'. This content should also be served over HTTPS.
+compiler:1 <!-- html content by Nandu Arav-->
+<!--Morpheus
+ note that my goal was not to touch nandu s html content , and not rely on Javascript to maintain purity of responsiveness.
+so only option is pure CSS, but also have to maintain a balance in putting design features so that it does not complicate reading -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    <style>
+/*styles by MORPHEUS
+Note that my goal here is to test features of CSS to make the reading process look more interactive but without touching html file so no divs , classes , ids and no JS to maintain responsiveness*/
+
+@keyframes shake1{
+    0%{transform:rotate(3deg);}
+    100%{transform:rotate(-3deg);}
+}
+@keyframes shake2{
+    0%{transform:rotate(-3deg);}
+    100%{transform:rotate(3deg);}
+}
+body {
+    color:white;
+    font-size:18px;
+    text-align:justify;
+    background-color:#456789;
+    font-family:courier;
+    letter-spacing:-1px;
+
+}
+p{
+    width:95%;
+    padding:3px;
+    font-size:0.5em;
+    background-color:#566699;
+    box-shadow:-2px -2px 10px cyan,
+                -3px -3px 10px cyan;
+    transition:1s;
+    transition:font-size 0.01s;
+    transition:content 0.01s;
+
+}
+p::first-line{
+    font-size:1em;
+}
+p:nth-child(even){
+    border-left:8px ridge #34347a;
+    border-top:8px ridge  #34347a;
+}
+p:nth-child(odd){
+    border-left:8px ridge #333;
+    border-top:8px ridge  #333;
+}
+p::first-letter{
+    font-size:1.4em;
+    color:yellow;
+}
+p:nth-child(odd):hover{
+    background-color:#46228a;
+    box-shadow:0px 0px 0px black, 0px 0px 0px black;
+    animation:shake1 0.12s 1 ease;
+    font-size:1em;
+}
+p:nth-child(even):hover{
+    background-color:#46228a;
+    box-shadow:0px 0px 0px black, 0px 0px 0px black;
+    animation:shake2 0.12s 1 ease;
+    font-size:1em;
+}
+p:nth-child(3):hover::before{
+    /*content:url("http://www.freeiconspng.com/uploads/horror-png-27.png");
+    /*content:url("http://soundbible.com/66-Screaming-Female.html");*/
+    
+}
+
+img{
+    position:fixed;
+    top: 0;
+    left:-150px;
+    z-index:-2;
+    height:100vh;
+    filter:blur(14px);
+}
+
+
+</style><script>alert("Try clicking question boxes 1, 2 ,  3 to see interactive text in order\n\nHtml Content by Nandu Arav\nStyles & strokes by Morpheus");
+
+
+window.onload = function(){
+    document.getElementById('sound1').addEventListener('click', function(){
+       playMusic(); 
+       document.querySelector('img').style.zIndex = "5";
+       document.querySelector('img').style.filter = "blur(0)";
+       
+       setTimeout(function (){
+          document.querySelector('img').style.zIndex = "-5";
+          alert ("Dont stare in those eyes keep reading")
+       }, 2000)
+    });
+}
+
+function playMusic(){
+    var playPromise = document.querySelector('#myAudio').play();
+
+// In browsers that don’t yet support this functionality,
+// playPromise won’t be defined.
+if (playPromise !== undefined) {
+    playPromise.then(function() {
+        // Automatic playback started!
+        // console.log("auto playback started")
+    }).catch(function(error) {
+        // Automatic playback failed.
+        // Show a UI element to let the user manually start playback.
+        // console.log("auto playback is blocked here and requires user interaction hence click anywhere for music");
+    });
+    }
+
+}
+</script></head>
+    <body>
+        <p>
+            
+            1)What is data-structure?
+<br />
+    Data structure is a way of defining, storing and retriving of data in a structural and systemetic way.
+A data structure may contain different type of data items.
+</p>
+<p>
+2)What are various data-structures available?
+<br/>
+     Data structure availability may vary by programming languages. Commonly available data structures are list, arrays, stack, 
+queues, graph, tree etc.
+</p>
+<p id="sound1" >
+3)What is selection sort?
+<br/>
+     Selection sort is in-place sorting technique. It divides the data set into two sub-lists: sorted and unsorted. Then it selects
+the minimum element from unsorted sub-list and places it into the sorted list. This iterates unless all the elements from unsorted 
+sub-list are consumed into sorted sub-list.
+</p>
+<p>
+4)How insertion sort and selection sorts are different?
+<br/>
+      Both sorting techniques maintains two sub-lists, sorted and unsorted and both take one element at a time and places it into 
+sorted sub-list. Insertion sort works on the current element in hand and places it in the sorted array at appropriate location
+maintaining the properties of insertion sort. Whereas, selection sort searches the minimum from the unsorted sub-list and replaces
+it with the current element in hand.
+</p>
+<p>
+5)What is merge sort and how it works?
+<br/>
+      Merge sort is sorting algorithm based on divide and conquer programming approach. It keeps on dividing the list into smaller
+sub-list until all sub-list has only 1 element. And then 
+compiler:1 Mixed Content: The page at 'https://code.sololearn.com/W9LL1aK51Md9/#html' was loaded over HTTPS, but requested an insecure image 'http://www.freeiconspng.com/uploads/horror-png-27.png'. This content should also be served over HTTPS.
+(anonymous) @ compiler:1
+setTimeout (async)
+success @ compiler:1
+l @ jquery:1
+fireWith @ jquery:1
+w @ jquery:1
+(anonymous) @ jquery:1
+load (async)
+send @ jquery:1
+ajax @ jquery:1
+r.runCode @ compiler:1
+(anonymous) @ compiler:1
+dispatch @ jquery:1
+a.handle @ jquery:1
